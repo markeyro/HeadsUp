@@ -20,3 +20,5 @@ while True:
     time.sleep(5)
 
 #BREAK
+
+#well tried to add the thermocouple code and it takes too much memory, so that's a hard stop till the m4 gets here, i'm worried about sensor RAM needs in this project :(
