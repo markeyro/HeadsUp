@@ -1,0 +1,22 @@
+Working Code BME Sensor ONLY 9.21.21
+
+#HeadsUp by Mark Rohlfing with a ton of help from the world.
+#Latest changes 9/21/21
+
+#all the imports go here
+import board
+import time
+from adafruit_bme280 import basic as adafruit_bme280
+
+#setup the BME Sensor
+i2c = board.I2C()  # uses board.SCL and board.SDA
+bme280 = adafruit_bme280.Adafruit_BME280_I2C(i2c,0x76)
+
+while True:
+    print("\n\nTemperature: %0.1f C" % bme280.temperature)
+    print("Humidity: %0.1f %%" % bme280.humidity)
+    print("Pressure: %0.1f hPa" % bme280.pressure)
+    print("Altitude: %0.1f m" % bme280.altitude)
+    time.sleep(5)
+
+#BREAK
